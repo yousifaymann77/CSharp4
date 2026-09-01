@@ -25,6 +25,11 @@ namespace Assign4
             AddBonusPages(pages);
             Console.WriteLine($"After Method : {pages}");
 
+            double[] prices1 = { 25.5, 40.0 };
+            ApplyDiscount(prices1);
+            Console.WriteLine(prices1[0]);
+
+
         }
 
         #region Write a method called PrintWelcomeMessage that takes no parameters and prints"Welcome to the Library!". Call it from Main.
@@ -47,6 +52,15 @@ namespace Assign4
         {
             pages += 50;
             Console.WriteLine(pages);
+        }
+        #endregion
+
+        #region Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to see, and why?
+        // It will print 20.5 because the array is passed by reference which means the original array is modified and the change is reflected outside the method.
+        static void ApplyDiscount(double[] prices)
+        {
+            prices[0] -= 5;
+            Console.WriteLine(prices[0]);
         } 
         #endregion
     }
