@@ -15,9 +15,15 @@ namespace Assign4
             int[,] ShelfCopies = new int[2, 2] { { 3, 5 }, { 1, 4 } };
             Console.WriteLine(ShelfCopies[1, 0]); 
             #endregion
-
-
-
+            
+            PrintWelcomeMessage();
         }
+
+        #region Write a method called PrintWelcomeMessage that takes no parameters and prints"Welcome to the Library!". Call it from Main.
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        } 
+        #endregion
     }
 }
