@@ -17,7 +17,14 @@ namespace Assign4
             #endregion
             
             PrintWelcomeMessage();
+
             PrintBookTitle("Clean Code");
+
+            int pages = 400;
+            Console.WriteLine($"Before Method : {pages}");
+            AddBonusPages(pages);
+            Console.WriteLine($"After Method : {pages}");
+
         }
 
         #region Write a method called PrintWelcomeMessage that takes no parameters and prints"Welcome to the Library!". Call it from Main.
@@ -30,6 +37,16 @@ namespace Assign4
         static void PrintBookTitle(string title)
         {
             Console.WriteLine($"Book Title : {title}");
+        }
+        #endregion
+
+        #region Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward.What do you expect to see, and why?
+        
+        // It will print 400 because the variable is passed by value which takes a copy of the variable and does not change the original one 
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
+            Console.WriteLine(pages);
         } 
         #endregion
     }
