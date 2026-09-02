@@ -38,6 +38,10 @@ namespace Assign4
             ReplaceArray(ref prices1);
             Console.WriteLine("Prices array length after method:" +prices1.Length);
 
+            double price;
+            TryGetPrice("Clean Code", out  price);
+            Console.WriteLine($"Price for 'Clean Code': {price}");
+
 
         }
 
@@ -88,9 +92,25 @@ namespace Assign4
         static void ReplaceArray(ref double[] prices)
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
-        } 
+        }
         #endregion
 
+        #region Write a method bool TryGetPrice(string title, out double price) that returns true and setsprice to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it2and print the price if found
+        static bool TryGetPrice(string Title, out double price)
+        {
+            if (Title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0.0;
+                return false;
+            }
+
+        } 
+        #endregion
 
     }
 }
