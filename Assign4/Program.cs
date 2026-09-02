@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assign4
 {
@@ -33,6 +34,9 @@ namespace Assign4
             Console.WriteLine($"Before Method : {pagesByRef}");
             AddBonusPagesByRef(ref pagesByRef);
             Console.WriteLine($"After Method : {pagesByRef}");
+
+            ReplaceArray(ref prices1);
+            Console.WriteLine("Prices array length after method:" +prices1.Length);
 
 
         }
@@ -76,7 +80,17 @@ namespace Assign4
         {
             pages += 50;
             Console.WriteLine(pages);
+        }
+        #endregion
+
+
+        #region Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with anew array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Lengthafterward.
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         } 
         #endregion
+
+
     }
 }
