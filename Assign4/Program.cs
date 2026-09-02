@@ -42,6 +42,9 @@ namespace Assign4
             TryGetPrice("Clean Code", out  price);
             Console.WriteLine($"Price for 'Clean Code': {price}");
 
+            PrintBookInfo("C#");
+            PrintBookInfo("C#", 500);
+
 
         }
 
@@ -109,6 +112,13 @@ namespace Assign4
                 return false;
             }
 
+        }
+        #endregion
+
+        #region Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            Console.WriteLine($"Book Title : {title} , Pages : {pages}");
         } 
         #endregion
 
