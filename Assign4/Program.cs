@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assign4
@@ -44,6 +45,10 @@ namespace Assign4
 
             PrintBookInfo("C#");
             PrintBookInfo("C#", 500);
+
+            #region Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
+            PrintBookInfo(pages: 600, title: "C# Advanced");  
+            #endregion
 
 
         }
