@@ -29,6 +29,11 @@ namespace Assign4
             ApplyDiscount(prices1);
             Console.WriteLine(prices1[0]);
 
+            int pagesByRef = 400;
+            Console.WriteLine($"Before Method : {pagesByRef}");
+            AddBonusPagesByRef(ref pagesByRef);
+            Console.WriteLine($"After Method : {pagesByRef}");
+
 
         }
 
@@ -38,6 +43,7 @@ namespace Assign4
             Console.WriteLine("Welcome to the Library!");
         }
         #endregion
+        
         #region Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code".
         static void PrintBookTitle(string title)
         {
@@ -61,6 +67,15 @@ namespace Assign4
         {
             prices[0] -= 5;
             Console.WriteLine(prices[0]);
+        }
+        #endregion
+
+        #region Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.How is the result different from question 5?
+        // will print 450 because the variable is passed by refrence which modifies the original variable
+        static void AddBonusPagesByRef(ref int pages)
+        {
+            pages += 50;
+            Console.WriteLine(pages);
         } 
         #endregion
     }
